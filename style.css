@@ -1,0 +1,86 @@
+* {
+    font-family: "Raleway", sans-serif;
+}
+
+.container {
+    width: 500px;
+    margin: 3.125rem auto 0 auto;
+    margin-bottom: 4em;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0.25rem;
+    padding: 1em;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 700px) {
+    .container {
+        width: 70%;   
+    }
+}
+
+.title {
+    position: relative;
+    background-color: rgba(0, 0, 0, 1);
+    color: rgb(255, 255, 255);
+    padding: 0.5em;
+    margin-bottom: 0.3em;
+    font-size: 1.8rem;
+    border-radius: 0.25em;
+}
+
+@media only screen and (max-width: 700px) {
+    .title {
+        font-size: 1.5rem;
+    }
+}
+
+.input {
+    display:inline;
+    width: 90%;
+    height: 1.35rem;
+    padding: 0.375rem 0.75rem;
+    margin-top: 1em;
+    border-radius: 0.25rem;
+}
+
+@media only screen and (max-width: 700px) {
+    .input {
+        width: 85%;
+    }
+}
+
+.btn {
+    position: relative;
+    padding: 0.5em;
+    background-color: rgb(250, 151, 37);
+    display: inline-block;
+    margin: 0.7em;
+    outline: none;
+    border: none;
+    font-size: 0.7em;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.checkbox {
+    width: 90% auto;
+    text-align: left;
+    padding: 0.5em;
+    margin-top: 0.3em;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.todo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    max-width: 40%;
+    margin: 0 auto 0.5em auto;
+    border-bottom: 0.2rem solid rgba(0, 0, 0, 0.2);
+    
+}
