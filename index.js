@@ -6,7 +6,6 @@ function Todo({ todo, toggleTodo }){
     
     const completedStyle = {
       fontStyle: "italic",
-      color: "#a7a7a7",
       textDecoration: "line-through"
     }
     
@@ -14,7 +13,7 @@ function Todo({ todo, toggleTodo }){
       <div className='checkbox'>
         <label>
           <input type="checkbox" checked={todo.complete} onChange={handleTodoClick} />      
-         <p style={todo.complete ? completedStyle: null}>
+          <p style={todo.complete ? completedStyle: null}>
           {todo.name}
           </p> 
         </label> 
@@ -42,7 +41,7 @@ function Todo({ todo, toggleTodo }){
     
     useEffect(() => {
       const storedTodos = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
-     if (storedTodos) setTodos(storedTodos)
+      if (storedTodos) setTodos(storedTodos)
     }, [])
     
     useEffect(() => {
@@ -73,13 +72,15 @@ function Todo({ todo, toggleTodo }){
     return (
       <div className='container'>
         <div className='title'>Task Tracker</div>
-         <TodoList todos={todos} toggleTodo={toggleTodo} />
-         <input className='input' ref={todoNameRef} type="text" />
-         <button className='btn' onClick={handleAddTodo}>Add Task</button>
-         <button className='btn' onClick={handleClearTodos}>Clear Task</button> 
-         <div className='todo'>{todos.filter(todo => !todo.complete).length} left to do</div>
+          <TodoList todos={todos} toggleTodo={toggleTodo} />
+          <input className='input' ref={todoNameRef} type="text" />
+          <button className='btn' onClick={handleAddTodo}>Add Task</button>
+          <button className='btn' onClick={handleClearTodos}>Clear Task</button> 
+          <div className='todo'>{todos.filter(todo => !todo.complete).length} left to do</div>
       </div>
     )
   }
-   ReactDOM.render(<App />, document.getElementById("root"));
+  const container = document.getElementById('root');
+  const root = ReactDOM.createRoot(container);
+  root.render(<App />);
   
