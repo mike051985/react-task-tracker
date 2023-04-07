@@ -71,7 +71,7 @@ function Todo({ todo, toggleTodo }){
     
     return (
       <div className='container'>
-        <div className='title'>Task Tracker</div>
+        <div className='title'>Task Management</div>
           <TodoList todos={todos} toggleTodo={toggleTodo} />
           <input className='input' ref={todoNameRef} type="text" />
           <button className='btn' onClick={handleAddTodo}>Add Task</button>
